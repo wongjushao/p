@@ -72,6 +72,6 @@ Route::fallback(function () {
     return 'The requested page does not exist.';
 });
 
-// Route::get('/', function () {
-//     return view('index',['name' => 'John'],['age'=> '18']);
-// });
+Route::get('/', function () use ($tasks){
+    return view('index',['tasks' => $tasks]);
+});
